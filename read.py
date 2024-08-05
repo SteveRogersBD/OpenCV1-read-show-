@@ -6,8 +6,8 @@ import os
 img = cv.imread('cap.jpg')
 
 # Resize the image
-re_img = cv.resize(img, (300, 300))
-
+re_img = cv.resize(img, (400, 300))
+print(re_img.shape) #returns width, height, no of color channels. ex: 300,300,3
 # Horizontally stack three copies of the resized image
 h = np.hstack((re_img, re_img, re_img))
 v=np.vstack((h,h,h))
