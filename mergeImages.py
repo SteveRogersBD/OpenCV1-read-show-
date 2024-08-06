@@ -1,0 +1,10 @@
+import cv2 as cv
+img1=cv.imread('cap.jpg')
+img1=cv.resize(img1,(500,500))
+img2=cv.imread(r'D:\Research\imageReadandWrite\pics\usa_today.png')
+img2=cv.resize(img2,(500,500))
+#new_img=cv.addWeighted(img1,0.5,img2,0.5,1)
+new_img = cv.subtract(img1, img2)
+cv.imshow('Cap',new_img)
+cv.waitKey(0)
+cv.destroyAllWindows()
