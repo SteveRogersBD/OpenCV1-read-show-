@@ -1,0 +1,12 @@
+import cv2 as cv
+img=cv.imread('cap.jpg')
+print(img.shape)
+cv.imshow('org',img)
+img=cv.pyrDown(img)
+print(img.shape)
+cv.imshow('down',img)
+img=cv.pyrUp(img)
+print(img.shape)
+cv.imshow('up',img)
+cv.waitKey(0)
+cv.destroyAllWindows()
